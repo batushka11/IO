@@ -24,8 +24,8 @@
 <br> 4.2	Przeznaczenie dokumentacji
 <br> 4.3	Opis organizacji lub analiza rynku
 <br> 4.4	Analiza SWOT organizacji
-1. Specyfikacja wymagań
-<br> 5.1	Charakterystyka ogólna
+5. [Specyfikacja wymagań](/README/5.md) 
+<br> 5.1	[Charakterystyka ogólna](/README/5.md#51-charakterystyka-ogólna)
 <br> 5.2	Wymagania funkcjonalne
 <br> 5.3	Wymagania niefunkcjonalne
 1. Zarządzanie projektem

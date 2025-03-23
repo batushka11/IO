@@ -38,14 +38,14 @@
 <br> 7.3	Plan reakcji na ryzyko
 1. Zarządzanie jakością
 <br> 8.1	Scenariusze i przypadki testowe
-1. Projekt techniczny
-<br> 9.1	Opis architektury systemu
-<br> 9.2	Technologie implementacji systemu
-<br> 9.3	Diagramy UML
-<br> 9.4	Charakterystyka zastosowanych wzorców projektowych
-<br> 9.5	Projekt bazy danych
-<br> 9.6	Projekt interfejsu użytkownika
-<br> 9.7	Procedura wdrożenia
+1. [Projekt techniczny](/README/9.md)
+<br> 9.1	[Opis architektury systemu](/README/9.md#91opis-architektury-systemu)
+<br> 9.2	[Technologie implementacji systemu](/README/9.md#92technologie-implementacji-systemu)
+<br> 9.3	[Diagramy UML](/README/9.md#93diagramy-uml)
+<br> 9.4	[Charakterystyka zastosowanych wzorców projektowych](/README/9.md#94charakterystyka-zastosowanych-wzorców-projektowych)
+<br> 9.5	[Projekt bazy danych](/README/9.md#95projekt-bazy-danych)
+<br> 9.6	[Projekt interfejsu użytkownika](/README/9.md#96projekt-interfejsu-użytkownika)
+<br> 9.7	[Procedura wdrożenia](/README/9.md#97procedura-wdrożenia)
 10.	Dokumentacja dla użytkownika
 11.	Podsumowanie
 <br> 11.1	Szczegółowe nakłady projektowe członków zespołu

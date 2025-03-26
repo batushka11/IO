@@ -26,7 +26,7 @@
 <br> 4.4	Analiza SWOT organizacji
 5. [Specyfikacja wymagań](/README/5.%20Specyfikacja%20wymagań.md) 
 <br> 5.1	[Charakterystyka ogólna](/README/5.%20Specyfikacja%20wymagań.md#51-charakterystyka-ogólna)
-<br> 5.2	Wymagania funkcjonalne
+<br> 5.2	[Wymagania funkcjonalne](/README/5.%20Specyfikacja%20wymagań.md#52-wymagania-funkcjonalne)
 <br> 5.3	Wymagania niefunkcjonalne
 1. Zarządzanie projektem
 <br> 6.1	Zasoby ludzkie

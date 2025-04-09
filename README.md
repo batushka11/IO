@@ -27,18 +27,17 @@
 5. [Specyfikacja wymagań](/README/5.%20Specyfikacja%20wymagań.md) 
 <br> 5.1	[Charakterystyka ogólna](/README/5.%20Specyfikacja%20wymagań.md#51-charakterystyka-ogólna)
 <br> 5.2	[Wymagania funkcjonalne](/README/5.%20Specyfikacja%20wymagań.md#52-wymagania-funkcjonalne)
-<br> 5.3	Wymagania niefunkcjonalne
-1. Zarządzanie projektem
+6. Zarządzanie projektem
 <br> 6.1	Zasoby ludzkie
 <br> 6.2	Harmonogram prac
 <br> 6.3	Etapy/kamienie milowe projektu
-1. Zarządzanie ryzykiem
+7. Zarządzanie ryzykiem
 <br> 7.1	Lista czynników ryzyka
 <br> 7.2	Ocena ryzyka
 <br> 7.3	Plan reakcji na ryzyko
-1. Zarządzanie jakością
+8. Zarządzanie jakością
 <br> 8.1	Scenariusze i przypadki testowe
-1. [Projekt techniczny](/README/9.%20Projekt%20techniczny.md)
+9. [Projekt techniczny](/README/9.%20Projekt%20techniczny.md)
 <br> 9.1	[Opis architektury systemu](/README/9.%20Projekt%20techniczny.md#91opis-architektury-systemu)
 <br> 9.2	[Technologie implementacji systemu](/README/9.%20Projekt%20techniczny.md#92technologie-implementacji-systemu)
 <br> 9.3	[Diagramy UML](/README/9.%20Projekt%20techniczny.md#93diagramy-uml)

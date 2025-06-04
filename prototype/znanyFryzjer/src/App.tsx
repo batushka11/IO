@@ -7,7 +7,7 @@ function App() {
 	return (
 		<MantineProvider theme={theme}>
 			<Routes>
-				<Route path='/login' element={<LoginPage />} />
+				<Route path="/" element={<LoginPage />} />
 			</Routes>
 		</MantineProvider>
 	)

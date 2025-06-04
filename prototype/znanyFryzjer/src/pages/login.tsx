@@ -3,6 +3,7 @@ import {
 	Button,
 	Center,
 	Container,
+	Flex,
 	Group,
 	Paper,
 	PasswordInput,
@@ -38,11 +39,11 @@ export const LoginPage: React.FC = () => {
 							</Stack>
 						</Paper>
 					</Group>
-					<Box h="30px" bg="teal.6">
+					<Flex h="30px" bg="teal.6" justify="center" align="center">
 						<Text c="dimmed" size="xs">
 							Opracowano przez polskich studentów
 						</Text>
-					</Box>
+					</Flex>
 				</Stack>
 			</Center>
 		</Container>

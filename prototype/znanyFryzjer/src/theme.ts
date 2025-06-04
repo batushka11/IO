@@ -12,16 +12,16 @@ export const theme = createTheme({
 
 	colors: {
 		brand: [
-			'#EFE7FF',
-			'#DFD3FF',
-			'#C9B7FF',
-			'#B49BFF',
-			'#9E7FFF',
-			'#8264FE',
-			'#6F51E8',
-			'#5C3ED1',
-			'#4A2CBA',
-			'#3719A3',
+			'#CCEBF0',
+			'#B3E0E6',
+			'#99D5DD',
+			'#80CAD3',
+			'#66BFCA',
+			'#0D697A',
+			'#0A5865',
+			'#084752',
+			'#05353F',
+			'#03242C',
 		],
 
 		neutral: [

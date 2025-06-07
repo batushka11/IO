@@ -13,10 +13,18 @@ import {
 	Title,
 } from '@mantine/core'
 import type React from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAppContext } from '../context/useAppContextHook'
 
 export const LoginPage: React.FC = () => {
 	const navigate = useNavigate()
+	const { users } = useAppContext()
+
+	useEffect(() => {
+		console.log(users)
+	}, [users])
+
 	return (
 		<Container size="xs">
 			<Center mih="100vh">
@@ -24,7 +32,9 @@ export const LoginPage: React.FC = () => {
 					<Box h="30px"></Box>
 					<Group w="100%">
 						<Center w="100%" mb="lg">
-							<Title order={1}>Znany Fryzjer</Title>
+							<Title order={1} c="teal.6">
+								Znany Fryzjer
+							</Title>
 						</Center>
 						<Paper withBorder p="xl" radius="md" w="100%">
 							<Stack gap="md">
@@ -40,7 +50,13 @@ export const LoginPage: React.FC = () => {
 								</Button>
 								<Flex justify={'center'} align={'center'} pt={'md'}>
 									<Text>Nie masz konta?</Text>
-									<Text style={{ cursor: 'pointer', textDecoration: 'underline' }} ml="xs" variant="subtle" onClick={() => navigate('/register')} c="teal.6">
+									<Text
+										style={{ cursor: 'pointer', textDecoration: 'underline' }}
+										ml="xs"
+										variant="subtle"
+										onClick={() => navigate('/register')}
+										c="teal.6"
+									>
 										Zarejestruj się
 									</Text>
 								</Flex>

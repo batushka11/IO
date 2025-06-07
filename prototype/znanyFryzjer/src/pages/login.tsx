@@ -16,12 +16,43 @@ import type React from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppContext } from '../context/useAppContextHook'
+import { useForm } from '@mantine/form'
 
 export const LoginPage: React.FC = () => {
-	const navigate = useNavigate()
 	const { users } = useAppContext()
+	const navigate = useNavigate()
 
 	useEffect(() => {
+		console.log(users)
+	}, [users])
+
+	const form = useForm({
+		mode: 'uncontrolled',
+		initialValues: {
+			email: '',
+			password: '',
+		},
+		validate: {
+			email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+		},
+	})
+
+	const handleSubmit = () => {
+		const error = form.validate()
+		if (error.hasErrors) {
+			return
+		}
+		const user = users.find(
+			(user) => user.email === form.getValues().email && user.password === form.getValues().password
+		)
+		console.log(user)
+		if (!user) {
+			return
+		}
+		navigate('/home')
+	}
+	
+	useEffect (() => {
 		console.log(users)
 	}, [users])
 
@@ -43,11 +74,13 @@ export const LoginPage: React.FC = () => {
 										Logowanie
 									</Text>
 								</Center>
-								<TextInput label="Email" placeholder="Email" required />
-								<PasswordInput label="Hasło" placeholder="Hasło" required />
-								<Button fullWidth mt="md">
-									Zaloguj się
-								</Button>
+								<form onSubmit={form.onSubmit(handleSubmit)}>
+									<TextInput label="Email" placeholder="Email" required key={form.key('email')} {...form.getInputProps('email')} />
+									<PasswordInput label="Hasło" placeholder="Hasło" required key={form.key('password')} {...form.getInputProps('password')}/>
+									<Button type='submit' fullWidth mt="md">
+										Zaloguj się
+									</Button>
+								</form>
 								<Flex justify={'center'} align={'center'} pt={'md'}>
 									<Text>Nie masz konta?</Text>
 									<Text

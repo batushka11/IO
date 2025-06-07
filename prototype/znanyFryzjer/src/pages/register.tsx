@@ -49,11 +49,11 @@ export const RegisterPage: React.FC = () => {
                             </Stack>
                         </Paper>
                     </Group>
-                    <Box h="30px" bg="teal.6">
-                        <Text c="dimmed" size="xs">
-                            Opracowano przez polskich studentów
+                    <Flex h="30px" bg="teal.6" justify="center" align="center">
+                        <Text c="dimmed" size="11px">
+                            Opracowano przez Andrii i Andrzej
                         </Text>
-                    </Box>
+                    </Flex>
                 </Stack>
             </Center>
         </Container>

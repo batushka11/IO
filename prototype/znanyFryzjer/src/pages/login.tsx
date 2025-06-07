@@ -13,8 +13,10 @@ import {
 	Title,
 } from '@mantine/core'
 import type React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const LoginPage: React.FC = () => {
+	const navigate = useNavigate()
 	return (
 		<Container size="xs">
 			<Center mih="100vh">
@@ -36,12 +38,18 @@ export const LoginPage: React.FC = () => {
 								<Button fullWidth mt="md">
 									Zaloguj się
 								</Button>
+								<Flex justify={'center'} align={'center'} pt={'md'}>
+									<Text>Nie masz konta?</Text>
+									<Text style={{ cursor: 'pointer', textDecoration: 'underline' }} ml="xs" variant="subtle" onClick={() => navigate('/register')} c="teal.6">
+										Zarejestruj się
+									</Text>
+								</Flex>
 							</Stack>
 						</Paper>
 					</Group>
 					<Flex h="30px" bg="teal.6" justify="center" align="center">
-						<Text c="dimmed" size="xs">
-							Opracowano przez polskich studentów
+						<Text c="dimmed" size="11px">
+							Opracowano przez Andrii i Andrzej
 						</Text>
 					</Flex>
 				</Stack>

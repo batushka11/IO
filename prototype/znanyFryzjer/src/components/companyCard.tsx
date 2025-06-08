@@ -10,6 +10,7 @@ import {
 } from '@mantine/core'
 import { FaMapLocation, FaPhone } from 'react-icons/fa6'
 import { TbClockHour8 } from 'react-icons/tb'
+import { useNavigate } from 'react-router-dom'
 import type { Company } from '../types/company'
 
 interface CompanyCardProps {
@@ -17,6 +18,7 @@ interface CompanyCardProps {
 }
 
 export const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
+	const navigate = useNavigate()
 	return (
 		<Card p="0" withBorder>
 			<Card.Section>
@@ -53,7 +55,12 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
 					<Text>{company.workingHours}</Text>
 				</Flex>
 				<Flex justify={'center'} mt={'md'} mb={'xl'}>
-					<Button variant="filled" radius="md" fullWidth>
+					<Button
+						variant="filled"
+						radius="md"
+						fullWidth
+						onClick={() => navigate(`/barbershop/${company.id}`)}
+					>
 						Umów wizytę
 					</Button>
 				</Flex>

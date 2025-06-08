@@ -12,11 +12,11 @@ import {
 	TextInput,
 	Title,
 } from '@mantine/core'
+import { useForm } from '@mantine/form'
 import type React from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppContext } from '../context/useAppContextHook'
-import { useForm } from '@mantine/form'
 
 export const LoginPage: React.FC = () => {
 	const { users } = useAppContext()
@@ -43,7 +43,9 @@ export const LoginPage: React.FC = () => {
 			return
 		}
 		const user = users.find(
-			(user) => user.email === form.getValues().email && user.password === form.getValues().password
+			(user) =>
+				user.email === form.getValues().email &&
+				user.password === form.getValues().password
 		)
 		console.log(user)
 		if (!user) {
@@ -51,8 +53,8 @@ export const LoginPage: React.FC = () => {
 		}
 		navigate('/home')
 	}
-	
-	useEffect (() => {
+
+	useEffect(() => {
 		console.log(users)
 	}, [users])
 
@@ -75,9 +77,21 @@ export const LoginPage: React.FC = () => {
 									</Text>
 								</Center>
 								<form onSubmit={form.onSubmit(handleSubmit)}>
-									<TextInput label="Email" placeholder="Email" required key={form.key('email')} {...form.getInputProps('email')} />
-									<PasswordInput label="Hasło" placeholder="Hasło" required key={form.key('password')} {...form.getInputProps('password')}/>
-									<Button type='submit' fullWidth mt="md">
+									<TextInput
+										label="Email"
+										placeholder="Email"
+										required
+										key={form.key('email')}
+										{...form.getInputProps('email')}
+									/>
+									<PasswordInput
+										label="Hasło"
+										placeholder="Hasło"
+										required
+										key={form.key('password')}
+										{...form.getInputProps('password')}
+									/>
+									<Button type="submit" fullWidth mt="md">
 										Zaloguj się
 									</Button>
 								</form>

@@ -6,6 +6,7 @@ import { HomePage } from './pages/home'
 import { LoginPage } from './pages/login'
 import { RegisterPage } from './pages/register'
 import { theme } from './theme'
+import BarbershopPage from './pages/barbershop'
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Route path="/" element={<LoginPage />} />
 					<Route path="/register" element={<RegisterPage />} />
 					<Route path="/home" element={<HomePage />} />
+					<Route path="/barbershop/:id" element={<BarbershopPage />} />
 				</Routes>
 			</MantineProvider>
 		</AppProvider>

@@ -1,10 +1,11 @@
+import '@mantine/carousel/styles.css'
 import { MantineProvider } from '@mantine/core'
 import { Route, Routes } from 'react-router-dom'
 import { AppProvider } from './context/AppProvider'
+import { HomePage } from './pages/home'
 import { LoginPage } from './pages/login'
 import { RegisterPage } from './pages/register'
 import { theme } from './theme'
-import { HomePage } from './pages/home'
 
 function App() {
 	return (

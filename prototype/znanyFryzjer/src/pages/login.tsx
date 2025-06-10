@@ -48,10 +48,11 @@ export const LoginPage: React.FC = () => {
 				user.email === form.getValues().email &&
 				user.password === form.getValues().password
 		)
-		console.log(user)
 		if (!user) {
 			return
 		}
+
+		localStorage.setItem('user', JSON.stringify(user))
 		navigate('/home')
 	}
 

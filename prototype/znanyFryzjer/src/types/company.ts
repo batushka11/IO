@@ -9,5 +9,5 @@ export type Company = {
 	employees: User[]
 	logo: string
 	rating: number
-    workingHours: string
+	workingHours: string
 }

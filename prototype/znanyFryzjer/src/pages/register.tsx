@@ -19,6 +19,12 @@ import { Footer } from '../components/footer'
 import { useAppContext } from '../context/useAppContextHook'
 import type { User } from '../types/user'
 
+function randomDate(start: Date, end: Date) {
+	return new Date(
+		start.getTime() + Math.random() * (end.getTime() - start.getTime())
+	)
+}
+
 export const RegisterPage: React.FC = () => {
 	const { setUsers } = useAppContext()
 	const navigate = useNavigate()
@@ -45,6 +51,18 @@ export const RegisterPage: React.FC = () => {
 				fullname: form.getValues().fullname,
 				email: form.getValues().email,
 				password: form.getValues().password,
+				subscription: Math.floor(Math.random() * 100),
+				avatar:
+					'https://img.freepik.com/premium-vector/character-avatar-isolated_729149-194801.jpg?semt=ais_hybrid&w=740',
+				history: [
+					{
+						id: 1,
+						date: randomDate(new Date(2025, 0, 1), new Date()).toString(),
+						companyName: 'Fryzjernia1',
+						barberName: 'Bartosz',
+						rating: Math.floor(Math.random() * 5),
+					},
+				],
 			},
 		])
 

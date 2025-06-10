@@ -1,19 +1,11 @@
 import { Carousel } from '@mantine/carousel'
-import {
-	ActionIcon,
-	Button,
-	Container,
-	Drawer,
-	Flex,
-	Stack,
-	Title,
-} from '@mantine/core'
+import { ActionIcon, Container, Flex, Stack, Title } from '@mantine/core'
 import Autoplay from 'embla-carousel-autoplay'
 import { useRef, useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { CompanyCard } from '../components/companyCard'
 import { Footer } from '../components/footer'
-import ThemeSwitch from '../components/themeSwitcher'
+import { Sidebar } from '../components/sidebar'
 import { useAppContext } from '../context/useAppContextHook'
 
 export const HomePage: React.FC = () => {
@@ -23,24 +15,7 @@ export const HomePage: React.FC = () => {
 
 	return (
 		<Container size={'xs'}>
-			<Drawer
-				opened={opened}
-				onClose={() => setOpened(false)}
-				overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
-				position="right"
-			>
-				<Stack justify="space-between" h="100%">
-					<ThemeSwitch />
-					<Stack gap={'xs'} h={'100%'}>
-						<Button.Group orientation="vertical">
-							<Button variant="default">Główna</Button>
-							<Button variant="default">Mój profil</Button>
-							<Button variant="default">Barbershopy</Button>
-						</Button.Group>
-					</Stack>
-					<Button>Wyloguj się</Button>
-				</Stack>
-			</Drawer>
+			<Sidebar opened={opened} onClose={() => setOpened(false)} />
 			<Flex
 				h="70px"
 				bg="teal.6"

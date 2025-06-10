@@ -16,6 +16,7 @@ import { useForm } from '@mantine/form'
 import type React from 'react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Footer } from '../components/footer'
 import { useAppContext } from '../context/useAppContextHook'
 
 export const LoginPage: React.FC = () => {
@@ -110,11 +111,7 @@ export const LoginPage: React.FC = () => {
 							</Stack>
 						</Paper>
 					</Group>
-					<Flex h="30px" bg="teal.6" justify="center" align="center">
-						<Text c="dimmed" size="11px">
-							Opracowano przez Andrii i Andrzej
-						</Text>
-					</Flex>
+					<Footer />
 				</Stack>
 			</Center>
 		</Container>

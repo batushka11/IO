@@ -2,15 +2,16 @@ import {
 	ActionIcon,
 	Avatar,
 	Box,
+	Button,
 	Card,
 	Container,
 	Divider,
 	Flex,
-	Image,
 	Stack,
 	Text,
 	Title,
 } from '@mantine/core'
+import type React from 'react'
 import { useState } from 'react'
 import { FaAngleDown } from 'react-icons/fa6'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -19,10 +20,10 @@ import { Footer } from '../components/footer'
 import { Sidebar } from '../components/sidebar'
 import { useAppContext } from '../context/useAppContextHook'
 
-export const BarbershopPage: React.FC = () => {
+export const ChooseServices: React.FC = () => {
 	const { id } = useParams()
-	const { companies } = useAppContext()
 	const [opened, setOpened] = useState(false)
+	const { companies } = useAppContext()
 	const navigate = useNavigate()
 
 	return (
@@ -65,39 +66,69 @@ export const BarbershopPage: React.FC = () => {
 						</Text>
 					</Stack>
 					<Divider size="xl" my="md" />
-					<Stack gap="xs">
-						<Title order={4}>Tnij jak ostatnio</Title>
-						<Image
-							h={200}
-							src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
-						/>
-					</Stack>
+
 					<Stack w="100%" mt="md" gap="xs">
-						<Title order={4}>Zapisy online</Title>
-						<Flex gap="md">
-							<Card
-								withBorder
-								style={{ justifyContent: 'center', alignItems: 'center' }}
-								w="50%"
-								h="200px"
-							>
-								<Stack justify="center" align="center">
-									<Image h={80} w={80} src="/fryzjer.png" />
-									<Text fw={700}>Wybierz fryzjera</Text>
+						<Title order={4}>Usługi fryzjerskie</Title>
+						<Stack gap="md">
+							<Card withBorder w="100%">
+								<Stack>
+									<Flex gap="xs">
+										<Title order={5}>Strzyżenie męskie</Title>
+										<Text size="sm" c="dimmed">
+											1 god.
+										</Text>
+									</Flex>
+									<Text fw={700} c="teal.4">
+										80zł
+									</Text>
 								</Stack>
 							</Card>
-							<Card
-								withBorder
-								style={{ justifyContent: 'center', alignItems: 'center' }}
-								w="50%"
-								onClick={() => navigate(`/barbershop/${id}/services`)}
-							>
-								<Stack justify="center" align="center">
-									<Image h={80} w={80} src="/usluga.png" />
-									<Text fw={700}>Wybierz usługę</Text>
+							<Card withBorder w="100%">
+								<Stack>
+									<Flex gap="xs">
+										<Title order={5}>Strzyżenie głowy + broda</Title>
+										<Text size="sm" c="dimmed">
+											1.5 god.
+										</Text>
+									</Flex>
+									<Text fw={700} c="teal.4">
+										200zł
+									</Text>
 								</Stack>
 							</Card>
-						</Flex>
+							<Card withBorder w="100%">
+								<Stack>
+									<Flex gap="xs">
+										<Title order={5}>Strzyżenie męskie</Title>
+										<Text size="sm" c="dimmed">
+											1 god.
+										</Text>
+									</Flex>
+									<Text fw={700} c="teal.4">
+										80zł
+									</Text>
+								</Stack>
+							</Card>
+							<Card withBorder w="100%">
+								<Stack>
+									<Flex gap="xs">
+										<Title order={5}>Strzyżenie głowy + broda</Title>
+										<Text size="sm" c="dimmed">
+											1.5 god.
+										</Text>
+									</Flex>
+									<Text fw={700} c="teal.4">
+										180zł
+									</Text>
+								</Stack>
+							</Card>
+						</Stack>
+						<Button
+							size="lg"
+							onClick={() => navigate(`/barbershop/${id}/time`)}
+						>
+							Wybierz czas
+						</Button>
 					</Stack>
 				</Stack>
 				<Footer />
@@ -105,5 +136,3 @@ export const BarbershopPage: React.FC = () => {
 		</Container>
 	)
 }
-
-export default BarbershopPage
